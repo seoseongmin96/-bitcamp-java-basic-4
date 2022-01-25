@@ -2,6 +2,17 @@ package Hello;
 
 import java.util.Scanner;
 
+/**
+ * packageName: calc
+ * fileName   : Hello1Demo.java
+ * author     : seoseongmin
+ * date       : 2022-01-25
+ * ================================
+ * DATE        AUTHOR        NOTE
+ * ================================
+ * 2022-01-25     seoseongmin        최초 생성
+ */
+
 public class Hello1Demo {
     public static void main(String[] args) {
         Hello1App hello1App = new Hello1App();

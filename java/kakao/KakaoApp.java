@@ -1,6 +1,17 @@
 package kakao;
 
 /**
+ * packageName: calc
+ * fileName   : KakaoApp.java
+ * author     : seoseongmin
+ * date       : 2022-01-25
+ * DATE         AUTHOR        NOTE
+ * desc       : 계산기 앱을 실행하는 데모
+ * ================================
+ * 2022-01-25     seoseongmin        최초 생성
+ */
+
+/**
  * 전화번호와 메시지를 받아서 전송하는 어플을 만드시오
  * String telno, String message
  * */

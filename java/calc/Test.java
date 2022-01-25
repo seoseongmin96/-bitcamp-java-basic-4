@@ -1,11 +1,8 @@
 package calc;
 
-import calc.CalcApp;
-
-import java.util.Scanner;
 /**
  * packageName: calc
- * fileName   : CalcDemo.java
+ * fileName   : Test
  * author     : seoseongmin
  * date       : 2022-01-25
  * ================================
@@ -13,8 +10,5 @@ import java.util.Scanner;
  * ================================
  * 2022-01-25     seoseongmin        최초 생성
  */
-
-public class CalcDemo {
-
-    }
-
+public class Test {
+}
