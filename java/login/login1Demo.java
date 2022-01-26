@@ -15,16 +15,16 @@ import java.util.Scanner;
 
 public class login1Demo {
     public static void main(String[] args) {
-       Scanner scanner = new Scanner(System.in);
-       LoginApp loginApp = new LoginApp();
-        System.out.println(LoginApp.Website);
-        System.out.println("ID :");
-        System.out.println("PW :");
-        System.out.println("Name :");
+       Scanner scanner =new Scanner(System.in);
+       login1App login1App = new login1App();
+        System.out.println("LOGIN_TITLE");
+        System.out.println("id");
         String id = scanner.next();
+        System.out.println("pw");
         String pw = scanner.next();
+        System.out.println("name");
         String name = scanner.next();
-        String res = loginApp.login(id, pw, name);
+        String res = login1App.login(id, pw, name);
         System.out.println(res);
 
     }

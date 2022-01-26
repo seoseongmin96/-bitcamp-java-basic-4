@@ -27,13 +27,28 @@ public class login1App {
         this.name = name;
         String res = "";
 
-        if (pw.equals("PASSWORD")) {
+
+        /*if (pw.equals("PASSWORD")) {
+
             res = String.format(" %s 님의 비번 %s 가 맞습니다. 로그인 성공 "
                     , this.name, this.pw);
         } else {
             res = String.format(" %s 님의 ID 는 맞고, 비번 %s 가 틀립니다. 로그인 실패"
                     , this.id, this.pw);
         }
-            return res;
+
+        */
+
+        switch (pw){
+                case "abc": res = String.format(" %s 님의 비번 %s 가 맞습니다. 로그인 성공 "
+                    , this.name, this.pw);break;
+
+            default : res = String.format(" %s 님의 ID 는 맞고, 비번 %s 가 틀립니다. 로그인 실패"
+                    , this.id, this.pw);
+
+        }
+
+        return res;
+
         }
     }
