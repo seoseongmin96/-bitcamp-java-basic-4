@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.Naver;
 
 /**
  * packageName: com.example.demo

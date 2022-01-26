@@ -1,10 +1,10 @@
-package com.example.demo;
+package com.example.demo.Google;
 
 import java.util.Scanner;
 
 /**
  * packageName: com.example.demo
- * fileName   : BmiDemo
+ * fileName   : GoogleDemo.java
  * author     : seoseongmin
  * date       : 2022-01-25
  * desc       :
@@ -13,17 +13,13 @@ import java.util.Scanner;
  * ================================
  * 2022-01-25     seoseongmin        최초 생성
  */
-public class BmiDemo {
+public class GoogleDemo {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        BmiApp bmiApp = new BmiApp();
-        System.out.println("name");
-        System.out.println("height");
-        System.out.println("weight");
-        String name = scanner.next();
-        String height = scanner.next();
-        String weight = scanner.next();
-        String res = bmiApp.bmi(name, height, weight);
+        GoogleApp googleApp = new GoogleApp();
+        System.out.println("search");
+        String search = scanner.next();
+        String res = googleApp.google(search);
         System.out.println(res);
     }
 }
