@@ -16,7 +16,7 @@ import java.util.Scanner;
 public class Calc1Demo {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        CalcApp calcApp = new CalcApp();
+        Calc1App calcApp = new Calc1App();
         System.out.println(Calc1App.CALC_APP);
         System.out.println("첫번째 숫자 : ");
         int num1 = scanner.nextInt();

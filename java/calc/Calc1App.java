@@ -26,16 +26,24 @@ public class Calc1App {
         this.num2 = num2;
         this.opcode = opcode;
         int res = 0;
-        if(opcode.equals("+")){}else
+        System.out.println(">>>>>>> "+opcode);
+        if(opcode.equals("+")) {
             res = num1 + num2;
-        if(opcode.equals("-")){}else
+        }else if(opcode.equals("-")){
             res = num1 - num2;
-        if(opcode.equals("*")){}else
+        }else if(opcode.equals("*")){
             res = num1 * num2;
-        if(opcode.equals("/")){}else
+        }else if(opcode.equals("/")){
             res = num1 / num2;
-        
-        return String.format("%d %s %d = %d ",
+        }
+
+
+        //switch (){}
+
+
+
+        String result = String.format("%d %s %d = %d ",
                 this.num1, this.opcode, this.num2, res);
+        return result;
     }
 }
