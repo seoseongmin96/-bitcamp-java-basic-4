@@ -39,16 +39,20 @@ public class login1App {
 
         */
 
-        switch (pw){
+        /*switch (pw){
                 case "abc": res = String.format(" %s 님의 비번 %s 가 맞습니다. 로그인 성공 "
                     , this.name, this.pw);break;
 
             default : res = String.format(" %s 님의 ID 는 맞고, 비번 %s 가 틀립니다. 로그인 실패"
                     , this.id, this.pw);
 
-        }
+        }*/
+        res = (pw.equals(PASSWORD)) ? String.format(" %s 님의 비번 %s 가 맞습니다. 로그인 성공 ", this.name, this.pw)
+            : String.format(" %s 님의 ID 는 맞고, 비번 %s 가 틀립니다. 로그인 실패"
+                , this.id, this.pw);
 
-        return res;
+
+    return res;
 
         }
     }
