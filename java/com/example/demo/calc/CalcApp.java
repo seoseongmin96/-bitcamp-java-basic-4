@@ -1,21 +1,17 @@
-package calc;
+package com.example.demo.calc;
 
 /**
- * packageName: calc
- * fileName   : calcApp.java
+ * packageName: com.example.demo.calc
+ * fileName   : CalcApp
  * author     : seoseongmin
- * date       : 2022-01-25
- * DATE         AUTHOR        NOTE
- * desc       : 계산기 앱을 실행하는 데모
+ * date       : 2022-01-27
+ * desc       :
  * ================================
- * 2022-01-25     seoseongmin        최초 생성
+ * DATE        AUTHOR        NOTE
+ * ================================
+ * 2022-01-27     seoseongmin        최초 생성
  */
-
-/***
-* 숫자 2개와 연산자 1개를 받아서 계산하는 계산기를 코딩하시오
- * int, String
-* */
-public class Calc1App {
+public class CalcApp {
     public static String CALC_APP = "계산기";
     private int num1;
     private String opcode;
@@ -51,4 +47,5 @@ public class Calc1App {
                 this.num1, this.opcode, this.num2, res);
         return result;
     }
+
 }

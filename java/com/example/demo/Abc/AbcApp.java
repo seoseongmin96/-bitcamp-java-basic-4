@@ -1,8 +1,8 @@
-package com.example.demo;
+package com.example.demo.Abc;
 
 /**
  * packageName: com.example.demo
- * fileName   : AmazonApp
+ * fileName   : AbcApp
  * author     : seoseongmin
  * date       : 2022-01-26
  * desc       :
@@ -11,9 +11,10 @@ package com.example.demo;
  * ================================
  * 2022-01-26     seoseongmin        최초 생성
  */
-public class AmazonApp {
-    public String getAmazon(){
-        String Amazon = String.format("");
-        return Amazon;
+public class AbcApp {
+    public String getAbc(){
+        String abc = String.format("abc");
+        return abc;
     }
+
 }

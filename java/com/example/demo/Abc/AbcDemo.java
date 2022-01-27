@@ -1,10 +1,10 @@
-package com.example.demo;
+package com.example.demo.Abc;
 
 import java.util.Scanner;
 
 /**
  * packageName: com.example.demo
- * fileName   : AmazonDemo
+ * fileName   : AbcDemo
  * author     : seoseongmin
  * date       : 2022-01-26
  * desc       :
@@ -13,13 +13,12 @@ import java.util.Scanner;
  * ================================
  * 2022-01-26     seoseongmin        최초 생성
  */
-public class AmazonDemo {
+public class AbcDemo {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        AmazonApp amazonApp= new AmazonApp();
-        String res = amazonApp.getAmazon();
+        AbcApp abcApp = new AbcApp();
+        String res = abcApp.getAbc();
         System.out.println(res);
     }
-
 
 }

@@ -1,23 +1,23 @@
-package calc;
+package com.example.demo.calc;
 
 import java.util.Scanner;
 
 /**
- * packageName: calc
- * fileName   : CalcDemo.java
+ * packageName: com.example.demo.calc
+ * fileName   : CalcDemo
  * author     : seoseongmin
- * date       : 2022-01-25
+ * date       : 2022-01-27
+ * desc       :
  * ================================
  * DATE        AUTHOR        NOTE
  * ================================
- * 2022-01-25     seoseongmin        최초 생성
+ * 2022-01-27     seoseongmin        최초 생성
  */
-
-public class Calc1Demo {
+public class CalcDemo {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        Calc1App calcApp = new Calc1App();
-        System.out.println(Calc1App.CALC_APP);
+        CalcApp calcApp = new CalcApp();
+        System.out.println(CalcApp.CALC_APP);
         System.out.println("첫번째 숫자 : ");
         int num1 = scanner.nextInt();
         System.out.println("연산자 + - * / : ");
@@ -29,3 +29,4 @@ public class Calc1Demo {
         System.out.println("연산결과 : "+ result);
     }
 }
+

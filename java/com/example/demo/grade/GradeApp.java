@@ -1,5 +1,7 @@
 package com.example.demo.grade;
 
+import java.util.Scanner;
+
 /**
  * packageName: com.example.demo.grade
  * fileName   : GradeApp
@@ -30,7 +32,6 @@ package com.example.demo.grade;
  */
 
 public class GradeApp {
-
     public static String GRADE_TITLE = "성적표";
     private String name;
     private int kor;
@@ -42,22 +43,33 @@ public class GradeApp {
         this.kor = kor;
         this.eng = eng;
         this.math = math;
-        int total = 0;
-        int avg = 0;
+        int total = kor + eng + math;
+        int avg = total / 3;
         String pass = (avg >= 60) ? "합격" : "불합격";
-        String grade = String.format("########## 성적표 ########\n" +
-                " * 이름: 홍길동\n" +
-                " * > 국어: %s점\n" +
-                " * > 영어: %d점\n" +
-                " * > 수학: %d점\n" +
-                " * 총점: %d점\n" +
-                " * 평균(정수): %d점\n" +
+        String grade = String.format("* ########## %s ########\n" +
+                " * 이름: %s\n" +
+                " * > 국어: %d\n" +
+                " * > 영어: %d\n" +
+                " * > 수학: %d\n" +
+                " * 총점: %d\n" +
+                " * 평균(정수): %d\n" +
                 " * 합격여부: %s\n" +
-                " * #######################", GRADE_TITLE, name, kor, eng, math, total, avg, pass);
+                " * #######################",GRADE_TITLE, name, kor, eng, math, total, avg, pass);
         return grade;
-
-
     }
-
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
