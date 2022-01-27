@@ -18,11 +18,16 @@ public class BmiApp {
     private String name;
     private String height;
     private String weight;
-    public String bmi(String name, String height, String weight){
+    String word;
+
+    public String getBmi(String name, String height, String weight){
         this.name = name;
         this.height = height;
         this.weight = weight;
         String res = String.format("res, this.name, this.height, this.weight");
         return res;
+    }
+    public void setBMI(){
+        word = "딘어";
     }
 }
