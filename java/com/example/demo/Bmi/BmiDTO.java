@@ -13,21 +13,38 @@ package com.example.demo.Bmi;
  */
 
 
-public class BmiApp {
+public class BmiDTO {
     public static String BMI = "BMI";
     private String name;
     private String height;
     private String weight;
-    String word;
 
-    public String getBmi(String name, String height, String weight){
+    public String getName(){
+        return name;
+    }
+    public void setName(String name){
         this.name = name;
+    }
+
+    public String getHeight(){
+        return height;
+    }
+    public void setHeight(String height){
         this.height = height;
+    }
+
+    public String getWeight(){
+        return weight;
+    }
+    public void setWeight(String weight){
         this.weight = weight;
+    }
+
+
+    public String getBmi(){
+
         String res = String.format("res, this.name, this.height, this.weight");
         return res;
     }
-    public void setBMI(){
-        word = "딘어";
-    }
+
 }
