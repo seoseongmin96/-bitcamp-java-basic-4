@@ -1,4 +1,6 @@
-package com.example.demo.Bmi;
+package com.example.demo.service;
+
+import com.example.demo.domain.BmiDTO;
 
 /**
  * packageName: com.example.demo
@@ -12,9 +14,8 @@ package com.example.demo.Bmi;
  * 2022-01-25     seoseongmin        최초 생성
  */
 public class BmiService {
-    public String getBmi(BmiDTO bmiDTO){
+    public String getBmi(BmiDTO bmi){
         //
-        return String.format("%s정상", bmiDTO.getName());
-
+        return String.format("%s정상", bmi.getName());
     }
 }

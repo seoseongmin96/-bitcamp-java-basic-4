@@ -1,15 +1,15 @@
 package com.example.demo.controller;
 
-import com.example.demo.Bmi.BmiDTO;
-import com.example.demo.Bmi.BmiService;
-import com.example.demo.Google.GoogleApp;
-import com.example.demo.Google.GoogleDemo;
-import com.example.demo.calc.CalcApp;
-import com.example.demo.calc.CalcDemo;
-import com.example.demo.grade.GradeApp;
-import com.example.demo.grade.GradeDemo;
-import login.login1App;
-import login.login1Demo;
+import com.example.demo.domain.LoginDTO;
+import com.example.demo.service.LoginService;
+import com.example.demo.domain.BmiDTO;
+import com.example.demo.service.BmiService;
+import com.example.demo.domain.GoogleDTO;
+import com.example.demo.service.GoogleService;
+import com.example.demo.domain.CalcDTO;
+import com.example.demo.service.CalcService;
+import com.example.demo.domain.GradeDTO;
+import com.example.demo.service.GradeService;
 
 import java.util.Scanner;
 
@@ -27,12 +27,18 @@ import java.util.Scanner;
 public class DemoController {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        CalcDemo calcDemo =new CalcDemo();
+        CalcDTO calc = new CalcDTO();
+        CalcService calcService =new CalcService();
         BmiDTO bmi = new BmiDTO();
         BmiService bmiService = new BmiService();
-        GoogleDemo googleDemo = new GoogleDemo();
-        GradeDemo gradeDemo = new GradeDemo();
-        login1Demo login1Demo = new login1Demo();
+        GoogleDTO google = new GoogleDTO();
+        GoogleService googleService = new GoogleService();
+        GradeDTO grade = new GradeDTO();
+        GradeService gradeService = new GradeService();
+        LoginDTO login = new LoginDTO();
+        LoginService loginService = new LoginService();
+
+
         while(true){
             System.out.println("메뉴 선택");
             String menu = "0.Exit 1.BMI 2.CALC 3.SEARCH 4.GRADE 5.LOGIN";
@@ -49,17 +55,28 @@ public class DemoController {
                bmi.setWeight(scanner.next());
                res = bmiService.getBmi(bmi); break;
                case "2" :
-               System.out.println(CalcApp.CALC_APP+"\n숫자1, 연산자, 숫자2 입력");
-               res = calcDemo.execute(scanner.nextInt(), scanner.next(), scanner.nextInt());break;
+               System.out.println(CalcDTO.CALC_APP+"\n숫자1, 연산자, 숫자2 입력");
+               calc.setNum1(scanner.nextInt());
+               calc.setOpcode(scanner.next());
+               calc.setNum2(scanner.nextInt());
+               res = calcService.getCalc(calc);break;
                case "3" :
-               System.out.println(GoogleApp.GOOGLE_APP +"\n 검색어 입력");
-               res = googleDemo.execute(scanner.next());break;
+               System.out.println(GoogleDTO.GOOGLE_APP +"\n 검색어 입력");
+               google.setSearch(scanner.next());
+               res = googleService.getGoogle(google);break;
                case "4" :
-               System.out.println(GradeApp.GRADE_TITLE+"\n 이름, 국어 ,영어, 수학");
-               res = gradeDemo.execute(scanner.next(), scanner.nextInt(), scanner.nextInt(), scanner.nextInt());break;
+               System.out.println(GradeDTO.GRADE_TITLE+"\n 이름, 국어 ,영어, 수학");
+               grade.setName(scanner.next());
+               grade.setKor(scanner.nextInt());
+               grade.setEng(scanner.nextInt());
+               grade.setMath(scanner.nextInt());
+               res = gradeService.getGrade(grade);break;
                case "5" :
-               System.out.println(login1App.LOGIN_TITLE+"\n ID , PW, Name 입력");
-               res = login1Demo.execute(scanner.next(), scanner.next(), scanner.next());break;
+               System.out.println(LoginDTO.LOGIN_TITLE+"\n ID , PW, Name 입력");
+               login.setId(scanner.next());
+               login.setPw(scanner.next());
+               login.setName(scanner.next());
+               res = loginService.execute(login);break;
                default: res = "WRONG"; break;
            }
             System.out.println(res);

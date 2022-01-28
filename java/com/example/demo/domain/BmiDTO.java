@@ -1,4 +1,4 @@
-package com.example.demo.Bmi;
+package com.example.demo.domain;
 
 /**
  * packageName: com.example.demo
@@ -40,11 +40,5 @@ public class BmiDTO {
         this.weight = weight;
     }
 
-
-    public String getBmi(){
-
-        String res = String.format("res, this.name, this.height, this.weight");
-        return res;
-    }
-
 }
+

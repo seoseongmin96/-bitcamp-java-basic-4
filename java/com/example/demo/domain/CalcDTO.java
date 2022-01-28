@@ -1,4 +1,4 @@
-package com.example.demo.calc;
+package com.example.demo.domain;
 
 /**
  * packageName: com.example.demo.calc
@@ -11,18 +11,33 @@ package com.example.demo.calc;
  * ================================
  * 2022-01-27     seoseongmin        최초 생성
  */
-public class CalcApp {
+public class CalcDTO {
     public static String CALC_APP = "계산기";
     private int num1;
     private String opcode;
     private int num2;
 
-    public String calc(int num1, String opcode, int num2){
+    public int getNum1(){
+        return num1;
+    }
+    public void setNum1(int num1){
         this.num1 = num1;
-        this.num2 = num2;
+    }
+    public String getOpcode(){
+        return opcode;
+    }
+    public void setOpcode(String opcode){
         this.opcode = opcode;
-        int res = 0;
-        System.out.println(">>>>>>> "+opcode);
+    }
+    public int getNum2(){
+        return num2;
+    }
+    public void setNum2(int num2){
+        this.num2 = num2;
+    }
+
+
+
 
         /* if(opcode.equals("+")) {
             res = num1 + num2;
@@ -35,17 +50,15 @@ public class CalcApp {
         }
 
 */
-        switch (opcode) {
+        /* switch (opcode) {
             case "+": res = num1 + num2; break;
             case "-": res = num1 - num2; break;
             case "*": res = num1 * num2; break;
             case "/": res = num1 / num2; break;
         }
 
+*/
 
-        String result = String.format("%d %s %d = %d ",
-                this.num1, this.opcode, this.num2, res);
-        return result;
-    }
+
 
 }
