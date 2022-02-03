@@ -19,21 +19,20 @@ import java.util.Scanner;
 public class TempController {
     public static void main(String[] args) {
 
-        String[] threeNames =    {"권혜민",  "조현국",       "김진영",  "김한슬",    "서성민"};
-        String[] threeSubjects = {"정렬",    "해시",        "힙"    ,  "완전탐색",  "DP",
+        String[] arr =    {       "권혜민",  "조현국",       "김진영",  "김한슬",    "서성민",
+                "정렬",    "해시",        "힙"    ,  "완전탐색",  "DP",
                 "스택",    "깊이우선탐색",  "그래프",   "탐욕법" , "이분탐색",
-                "큐" ,     "너비우선탐색",  ""     ,   ""       ,  "" };
+                "큐" ,     "너비우선탐색",   ""     ,   ""       , "" };
 
 
 
-        for ( int i = 0; i< threeNames.length; i++){
+        for( int i = 0; i< 5; i++){
 
-            System.out.println(threeNames[i]
-                    +" : "+threeSubjects[i]
-                    +" , "+threeSubjects[i + 5]
-                    +" , "+threeSubjects[i + 10]);}
+        }
     }
 }
+
+
 
 
 
