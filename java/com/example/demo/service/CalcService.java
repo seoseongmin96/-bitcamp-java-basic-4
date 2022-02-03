@@ -22,7 +22,8 @@ public class CalcService {
             case "*": result = calc.getNum1() * calc.getNum2(); break;
             case "/": result = calc.getNum1() / calc.getNum2(); break;
         }
-        String res = String.format("%d %s %d = %d", calc.getNum1(), calc.getOpcode(), calc.getOpcode());
+        String res = String.format("%d %s %d = %d", calc.getNum1(), calc.getOpcode(), calc.getNum2());
+
 
         return res;
     }
