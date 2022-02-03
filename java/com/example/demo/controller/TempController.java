@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
 import com.example.demo.domain.GradeDTO;
+import com.example.demo.domain.SubjectDTO;
 
 import java.util.Scanner;
 
@@ -17,28 +18,33 @@ import java.util.Scanner;
  */
 public class TempController {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("학생수는 몇명 ?");
-        int count = scanner.nextInt();
 
-        GradeDTO[] grades = new GradeDTO[count];
-        for(int i =0; i<grades.length; i++){
-            System.out.println("이름,국어,영어,수학점수 ");
-            grades[i] = new GradeDTO();
-            grades[i].setName(scanner.next());
-            grades[i].setKor(scanner.nextInt());
-            grades[i].setEng(scanner.nextInt());
-            grades[i].setMath(scanner.nextInt());
-
-        }
-        for(int i = 0; i < grades.length; i++){
-            System.out.println(" 이름  : "+grades[i].getName());
-            System.out.println(" 국어점수 : "+grades[i].getKor());
-            System.out.println(" 국어점수 : "+grades[i].getEng());
-            System.out.println(" 수학점수 : "+grades[i].getMath());
+        String[] threeNames =    {"권혜민",  "조현국",       "김진영",  "김한슬",    "서성민"};
+        String[] threeSubjects = {"정렬",    "해시",        "힙"    ,  "완전탐색",  "DP",
+                "스택",    "깊이우선탐색",  "그래프",   "탐욕법" , "이분탐색",
+                "큐" ,     "너비우선탐색",  ""     ,   ""       ,  "" };
 
 
 
-        }
+        for ( int i = 0; i< threeNames.length; i++){
+
+            System.out.println(threeNames[i]
+                    +" : "+threeSubjects[i]
+                    +" , "+threeSubjects[i + 5]
+                    +" , "+threeSubjects[i + 10]);}
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
