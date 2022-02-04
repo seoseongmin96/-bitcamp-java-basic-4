@@ -20,17 +20,22 @@ public class TempController {
     public static void main(String[] args) {
 
         String[] arr =    {       "권혜민",  "조현국",       "김진영",  "김한슬",    "서성민",
-                "정렬",    "해시",        "힙"    ,  "완전탐색",  "DP",
-                "스택",    "깊이우선탐색",  "그래프",   "탐욕법" , "이분탐색",
-                "큐" ,     "너비우선탐색",   ""     ,   ""       , "" };
+                                  "정렬",    "해시",        "힙"    ,  "완전탐색",  "DP",
+                                  "스택",    "깊이우선탐색",  "그래프",   "탐욕법" , "이분탐색",
+                                 "큐" ,     "너비우선탐색",   };
 
 
+        String s = "";
+        for( int i = 0; i< arr.length; i++){
+            if(i%5==0){s += "\n";}
+            s += i + ":" + arr[i] + "\t";
 
-        for( int i = 0; i< 5; i++){
+        }
+            System.out.println(s);
 
         }
     }
-}
+
 
 
 
