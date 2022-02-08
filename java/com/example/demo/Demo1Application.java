@@ -1,7 +1,7 @@
 package com.example.demo;
 
-import com.example.demo.member.controller.MemberController;
-import com.example.demo.phone.controller.PhoneController;
+import com.example.demo.auth.controller.AuthController;
+import com.example.demo.oop.controller.OopController;
 import com.example.demo.quiz.controller.QuizController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -15,8 +15,8 @@ public class Demo1Application {
 
         SpringApplication.run(Demo1Application.class, args);
         Scanner scanner = new Scanner(System.in);
-        MemberController memberController = new MemberController();
-        PhoneController phoneController = new PhoneController();
+        AuthController memberController = new AuthController();
+        OopController phoneController = new OopController();
         QuizController quizController = new QuizController();
         while (true) {
             System.out.println("메뉴선택 0.EXIT 1. Auth 2. OOP  3. Quiz 4.Algorithm");

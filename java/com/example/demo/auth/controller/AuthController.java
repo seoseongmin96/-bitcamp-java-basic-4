@@ -1,12 +1,12 @@
-package com.example.demo.member.controller;
+package com.example.demo.auth.controller;
 
-import com.example.demo.member.doamin.LoginDTO;
-import com.example.demo.member.doamin.BmiDTO;
-import com.example.demo.member.doamin.GoogleDTO;
-import com.example.demo.member.doamin.CalcDTO;
-import com.example.demo.member.doamin.GradeDTO;
-import com.example.demo.member.service.MemberService;
-import com.example.demo.member.service.MemberServiceImpl;
+import com.example.demo.auth.doamin.LoginDTO;
+import com.example.demo.auth.doamin.BmiDTO;
+import com.example.demo.auth.doamin.GoogleDTO;
+import com.example.demo.auth.doamin.CalcDTO;
+import com.example.demo.auth.doamin.GradeDTO;
+import com.example.demo.auth.service.AuthService;
+import com.example.demo.auth.service.AuthServiceImpl;
 
 import java.util.Scanner;
 
@@ -21,7 +21,7 @@ import java.util.Scanner;
  * ================================
  * 2022-01-27     seoseongmin        최초 생성
  */
-public class MemberController {
+public class AuthController {
     public  void execute(Scanner scanner) {
 
         CalcDTO calc = new CalcDTO();
@@ -34,7 +34,7 @@ public class MemberController {
 
         LoginDTO login = new LoginDTO();
 
-        MemberService service = new MemberServiceImpl();
+        AuthService service = new AuthServiceImpl();
 
 
         while(true){

@@ -1,4 +1,4 @@
-package com.example.demo.phone.service;
+package com.example.demo.oop.service;
 
 import java.util.Scanner;
 
@@ -13,7 +13,7 @@ import java.util.Scanner;
  * ================================
  * 2022-02-08     seoseongmin        최초 생성
  */
-public interface PhoneService {
+public interface OopService {
     void usePhone(Scanner scanner);
     void useCelPhone(Scanner scanner);
     void useIPhone(Scanner scanner);

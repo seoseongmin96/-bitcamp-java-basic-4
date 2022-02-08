@@ -1,6 +1,6 @@
-package com.example.demo.member.service;
+package com.example.demo.auth.service;
 
-import com.example.demo.member.doamin.*;
+import com.example.demo.auth.doamin.*;
 
 /**
  * packageName: com.example.demo.service
@@ -13,7 +13,7 @@ import com.example.demo.member.doamin.*;
  * ================================
  * 2022-02-07     seoseongmin        최초 생성
  */
-public interface MemberService {
+public interface AuthService {
     String getBmi(BmiDTO bmi);
     String calc(CalcDTO calc);
     String search(GoogleDTO googleDTO);

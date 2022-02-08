@@ -1,4 +1,4 @@
-package com.example.demo.member.doamin;
+package com.example.demo.auth.doamin;
 
 /**
  * packageName: com.example.demo

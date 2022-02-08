@@ -1,7 +1,7 @@
-package com.example.demo.phone.controller;
+package com.example.demo.oop.controller;
 
-import com.example.demo.phone.service.PhoneService;
-import com.example.demo.phone.service.PhoneServiceImpl;
+import com.example.demo.oop.service.OopService;
+import com.example.demo.oop.service.OopServiceImpl;
 
 import java.util.Scanner;
 
@@ -16,10 +16,10 @@ import java.util.Scanner;
  * ================================
  * 2022-02-08     seoseongmin        최초 생성
  */
-public class PhoneController {
+public class OopController {
     public  void execute(Scanner scanner) {
 
-        PhoneService service = new PhoneServiceImpl();
+        OopService service = new OopServiceImpl();
         while (true) {
             System.out.println("메뉴선택\n [집전화\n 휴대폰\n 아이폰\n 갤럭시노트]");
             String menu = "메뉴 0.EXIT 1.집전화 2.휴대폰 3.아이폰 4.갤럭시노트";

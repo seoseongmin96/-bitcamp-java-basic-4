@@ -24,7 +24,7 @@ public class QuizController {
         Feb09Controller feb09Controller = new Feb09Controller();
 
        while (true) {
-           System.out.println("0)Exit 1)2월 6일 2)2월 7일 3)2월 8일 4)2월 9일");
+           System.out.println("[서브메뉴]\n 0)Exit 1)2월 6일 2)2월 7일 3)2월 8일 4)2월 9일");
            switch (scanner.next()) {
                case "0":
                    System.out.println("### Exit ###");
