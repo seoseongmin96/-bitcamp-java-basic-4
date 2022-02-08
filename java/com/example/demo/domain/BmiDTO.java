@@ -16,29 +16,32 @@ package com.example.demo.domain;
 public class BmiDTO {
     public static String BMI = "BMI";
     private String name;
-    private String height;
-    private String weight;
+    private double height;
+    private double weight;
 
-    public String getName(){
+    public String getName() {
         return name;
     }
-    public void setName(String name){
+
+    public void setName(String name) {
         this.name = name;
     }
 
-    public String getHeight(){
+    public double getHeight() {
         return height;
     }
-    public void setHeight(String height){
+
+    public void setHeight(double height) {
         this.height = height;
     }
 
-    public String getWeight(){
+    public double getWeight() {
         return weight;
     }
-    public void setWeight(String weight){
+
+    public void setWeight(double weight) {
         this.weight = weight;
     }
-
 }
+
 
