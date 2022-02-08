@@ -1,10 +1,8 @@
-package com.example.demo.quiz.controller;
-
-import java.util.Scanner;
+package com.example.demo.quiz.service;
 
 /**
- * packageName: com.example.demo.quiz.controller
- * fileName   : Feb09Controller
+ * packageName: com.example.demo.quiz.service
+ * fileName   : Feb08ServiceImpl
  * author     : seoseongmin
  * date       : 2022-02-08
  * desc       :
@@ -13,8 +11,5 @@ import java.util.Scanner;
  * ================================
  * 2022-02-08     seoseongmin        최초 생성
  */
-public class Feb09Controller {
-    public void execute(Scanner scanner){
-
-    }
+public class Feb08ServiceImpl {
 }

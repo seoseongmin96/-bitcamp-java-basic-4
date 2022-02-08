@@ -13,7 +13,7 @@ import com.example.demo.auth.doamin.*;
  * ================================
  * 2022-02-07     seoseongmin        최초 생성
  */
-public interface AuthService {
+public interface MemberService {
     String getBmi(BmiDTO bmi);
     String calc(CalcDTO calc);
     String search(GoogleDTO googleDTO);

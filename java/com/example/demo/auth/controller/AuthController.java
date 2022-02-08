@@ -5,8 +5,8 @@ import com.example.demo.auth.doamin.BmiDTO;
 import com.example.demo.auth.doamin.GoogleDTO;
 import com.example.demo.auth.doamin.CalcDTO;
 import com.example.demo.auth.doamin.GradeDTO;
-import com.example.demo.auth.service.AuthService;
-import com.example.demo.auth.service.AuthServiceImpl;
+import com.example.demo.auth.service.MemberService;
+import com.example.demo.auth.service.MemberServiceImpl;
 
 import java.util.Scanner;
 
@@ -34,7 +34,7 @@ public class AuthController {
 
         LoginDTO login = new LoginDTO();
 
-        AuthService service = new AuthServiceImpl();
+        MemberService service = new MemberServiceImpl();
 
 
         while(true){

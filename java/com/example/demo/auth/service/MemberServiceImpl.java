@@ -13,7 +13,7 @@ import com.example.demo.auth.doamin.*;
  * ================================
  * 2022-02-07     seoseongmin        최초 생성
  */
-public class AuthServiceImpl implements AuthService {
+public class MemberServiceImpl implements MemberService {
     /**
      * BMI = w / t * t
      * 고도 비만 : 35 이상

@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import com.example.demo.algo.controller.AlgorithmController;
 import com.example.demo.auth.controller.AuthController;
 import com.example.demo.oop.controller.OopController;
 import com.example.demo.quiz.controller.QuizController;
@@ -15,11 +16,12 @@ public class Demo1Application {
 
         SpringApplication.run(Demo1Application.class, args);
         Scanner scanner = new Scanner(System.in);
+        AlgorithmController algorithmController = new AlgorithmController();
         AuthController memberController = new AuthController();
         OopController phoneController = new OopController();
         QuizController quizController = new QuizController();
         while (true) {
-            System.out.println("메뉴선택 0.EXIT 1. Auth 2. OOP  3. Quiz 4.Algorithm");
+            System.out.println("[메인메뉴] 0.EXIT 1. Auth 2. OOP  3. Quiz 4.Algorithm");
 
             switch (scanner.next()) {
                 case "0":
