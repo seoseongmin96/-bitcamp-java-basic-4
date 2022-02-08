@@ -1,11 +1,12 @@
-package com.example.demo.controller;
+package com.example.demo.member.controller;
 
-import com.example.demo.domain.LoginDTO;
-import com.example.demo.service.*;
-import com.example.demo.domain.BmiDTO;
-import com.example.demo.domain.GoogleDTO;
-import com.example.demo.domain.CalcDTO;
-import com.example.demo.domain.GradeDTO;
+import com.example.demo.member.doamin.LoginDTO;
+import com.example.demo.member.doamin.BmiDTO;
+import com.example.demo.member.doamin.GoogleDTO;
+import com.example.demo.member.doamin.CalcDTO;
+import com.example.demo.member.doamin.GradeDTO;
+import com.example.demo.member.service.MemberService;
+import com.example.demo.member.service.MemberServiceImpl;
 
 import java.util.Scanner;
 
@@ -20,9 +21,9 @@ import java.util.Scanner;
  * ================================
  * 2022-01-27     seoseongmin        최초 생성
  */
-public class StudentController {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+public class MemberController {
+    public  void execute(Scanner scanner) {
+
         CalcDTO calc = new CalcDTO();
 
         BmiDTO bmi = new BmiDTO();
@@ -33,7 +34,7 @@ public class StudentController {
 
         LoginDTO login = new LoginDTO();
 
-        StudentService service = new StudentServiceImpl();
+        MemberService service = new MemberServiceImpl();
 
 
         while(true){

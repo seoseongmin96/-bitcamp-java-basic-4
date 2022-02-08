@@ -1,4 +1,6 @@
-package com.example.demo.service;
+package com.example.demo.quiz.service;
+
+import com.example.demo.quiz.service.Feb07Service;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -14,7 +16,7 @@ import java.util.Scanner;
  * ================================
  * 2022-02-07     seoseongmin        최초 생성
  */
-public class Feb07ServiceImpl implements Feb07Service{
+public class Feb07ServiceImpl implements Feb07Service {
 
     @Override
     public void dice(Scanner scanner) {
@@ -27,7 +29,7 @@ public class Feb07ServiceImpl implements Feb07Service{
         int computer = random.nextInt(3); // computer라는 정수 타입의 변수를 random으로 할당한다. ( 이때 난수는 3)
         while (true){ // 반복문 while을 사용하여 가위,바위,보, 탈출이라는 메뉴를 출력한다.
             System.out.println("0.가위 1.바위 2.보 3.EXIT");
-            int user = scanner.nextInt(); // 사용자라는 정수 타입의 변수를 scanner로 쓴다.
+            int user = scanner.nextInt(); // 사용자라는 정수 타입의 변수를 scanner로 받는다.
             String s = ""; // s라는 변수를 초기화 한다.
             if(user==3){ // 조건문 if를 사용하여 사욪아가 3일 경우 s는 종료하는 것을 의미한다.
                 s = "종료합니다";
@@ -46,7 +48,7 @@ public class Feb07ServiceImpl implements Feb07Service{
                 case -2 :
                     s = "졌다...";
                 case 0 :
-                    s = "비겼음1";
+                    s = "비겼음!";
                     break;
                 default:    // 잘못 입력했을 때를 나타내기 위해 씀
                     s = "다시 입력해 주세요"; // 다시 입력하라는 결과

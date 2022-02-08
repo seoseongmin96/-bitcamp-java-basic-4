@@ -1,6 +1,6 @@
-package com.example.demo.service;
+package com.example.demo.member.service;
 
-import com.example.demo.domain.*;
+import com.example.demo.member.doamin.*;
 
 /**
  * packageName: com.example.demo.service
@@ -13,7 +13,7 @@ import com.example.demo.domain.*;
  * ================================
  * 2022-02-07     seoseongmin        최초 생성
  */
-public class StudentServiceImpl implements StudentService{
+public class MemberServiceImpl implements MemberService {
     /**
      * BMI = w / t * t
      * 고도 비만 : 35 이상
@@ -25,6 +25,7 @@ public class StudentServiceImpl implements StudentService{
      * */
     @Override
     public String getBmi(BmiDTO param) {
+
         double bmi = param.getWeight() / (param.getHeight() * param.getHeight()) * 10000;
         String s = "";
             if(bmi >= 35){
