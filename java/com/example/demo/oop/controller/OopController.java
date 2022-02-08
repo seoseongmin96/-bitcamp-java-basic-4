@@ -17,7 +17,7 @@ import java.util.Scanner;
  * 2022-02-08     seoseongmin        최초 생성
  */
 public class OopController {
-    public  void execute(Scanner scanner) {
+    public static void execute(Scanner scanner) {
 
         OopService service = new OopServiceImpl();
         while (true) {

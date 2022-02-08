@@ -1,5 +1,7 @@
 package com.example.demo.quiz.service;
 
+import java.util.Scanner;
+
 /**
  * packageName: com.example.demo.quiz.service
  * fileName   : Feb08ServiceImpl
@@ -11,5 +13,61 @@ package com.example.demo.quiz.service;
  * ================================
  * 2022-02-08     seoseongmin        최초 생성
  */
-public class Feb08ServiceImpl {
-}
+public class Feb08ServiceImpl implements Feb08Service{
+    @Override
+    public void timestable(Scanner scanner) {
+
+    }
+
+    @Override
+    public void baseball(Scanner scanner) {
+
+    }
+
+    @Override
+    public void lotto(Scanner scanner) {
+
+    }
+
+    @Override
+    public void bank(Scanner scanner) {
+
+    }
+
+    @Override
+    public void book(Scanner scanner) {
+        // 1. 배열을 이용하여 간단한 극장 예약시스템 작성
+        // 2. 아주 작은 극장이라 좌석이 10개만  됨.
+        // 3. 먼저 좌석 배치표를 보여주고 예약이 끝나면 1로
+        // 4. 예약이 안된 좌석은 0으로 나타내라.
+        
+        int seat[] = new int[10];
+        int rserved;
+
+        while (true){
+            System.out.println("좌석을 예약하시겠습니까? (1또는 0)");
+            int q = scanner.nextInt();
+
+            if (q == 0) break;
+            System.out.println("현재의 예약상태는 다음과 같습니다.");
+            System.out.println("===");
+            for(int i=0; i<10; i++){
+                System.out.println(i +1 + "");
+            }
+            System.out.println();
+            for (int i : seat)
+                System.out.println(i + "");
+            System.out.println();
+            System.out.println("몇 번째 좌석을 에약하시겠습니까?");
+            rserved = scanner.nextInt();
+            seat[rserved-1] = 1;
+            System.out.println("예약되었습니다.");
+        }
+        System.out.println("프로그램을 종료합니다.");
+        scanner.close();
+
+
+        }
+           
+    }
+

@@ -22,7 +22,7 @@ import java.util.Scanner;
  * 2022-01-27     seoseongmin        최초 생성
  */
 public class AuthController {
-    public  void execute(Scanner scanner) {
+    public static void execute(Scanner scanner) {
 
         CalcDTO calc = new CalcDTO();
 

@@ -29,16 +29,16 @@ public class Demo1Application {
                     return;
                 case "1":
                     System.out.println("### Auth ###");
-                    memberController.execute(scanner);
+                    AuthController.execute(scanner);
                     break;
 
                 case "2":
                     System.out.println("### OOP ###");
-                    phoneController.execute(scanner);
+                    OopController.execute(scanner);
                     break;
                 case "3":
                     System.out.println("### Quiz ###");
-                    quizController.execute(scanner);
+                    QuizController.execute(scanner);
                     break;
                 case "4":
                     System.out.println("### Algorithm ###");
@@ -47,7 +47,7 @@ public class Demo1Application {
                     System.out.println(" Wrong Number ");
 
             }
-            phoneController.execute(scanner);
+            OopController.execute(scanner);
         }
 
 

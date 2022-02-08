@@ -1,9 +1,6 @@
 package com.example.demo.quiz.controller;
 
-import com.example.demo.quiz.service.Feb06Service;
-import com.example.demo.quiz.service.Feb06ServiceImpl;
-import com.example.demo.quiz.service.Feb07Service;
-import com.example.demo.quiz.service.Feb07ServiceImpl;
+import com.example.demo.quiz.service.*;
 
 import java.util.Scanner;
 
@@ -19,10 +16,10 @@ import java.util.Scanner;
  * 2022-02-03     seoseongmin        최초 생성
  */
 public class QuizController {
-   public void execute(Scanner scanner) {
+   public static void execute(Scanner scanner) {
         Feb06Service feb06Service = new Feb06ServiceImpl();
         Feb07Service feb07Service = new Feb07ServiceImpl();
-
+        Feb08Service feb08Service = new Feb08ServiceImpl();
 
        while (true) {
            System.out.println("[서브메뉴]\n 0)Exit 1)2월 6일 2)2월 7일 3)2월 8일 4)2월 9일");
@@ -40,7 +37,7 @@ public class QuizController {
 
 
 
-                   System.out.println("[소메뉴] 0.EXIT\n" + "1. 팀별 과제 출력 \n" + "2. 팀장이 맡은 과제만 출력 \n" +
+                   System.out.println("[6일소메뉴] 0.EXIT\n" + "1. 팀별 과제 출력 \n" + "2. 팀장이 맡은 과제만 출력 \n" +
                            "3. 큐를 담당한 사람을 출력 \n" + "4. 팀원별 과제 수를 출력 \n");
                    while (true){
                        switch (scanner.next()){
@@ -55,7 +52,7 @@ public class QuizController {
                            case "4" :
                                feb06Service.quiz4(arr); break;
                            default:
-                               System.out.println("번호 제대로 입력하기"); break;
+                               System.out.println("잘못된 정보입니다."); break;
                        }
                    }
 
@@ -64,9 +61,10 @@ public class QuizController {
 
 
                        while (true){
-                           System.out.println("메뉴 선택"); //메뉴출력
-                           String menu = "\"메뉴 0.EXIT 1.주사위 dice 2.가위바위보 Rps 3.입력받은 두 수 사이의 있는 소수 구하기 getPrime \" +\n" +
-                                   "  \"4.자바로 입력받은 연도가 윤년인지 평년인지 판단하기 leapYear 5. 임의로 입력받은 숫자 맞추기 numberGolf\"";
+                           String menu = "\"[7일 소메뉴] 0.EXIT 1.주사위 dice 2.가위바위보 Rps " +
+                                   "3.입력받은 두 수 사이의 있는 소수 구하기 getPrime \" +\n" +
+                                   "  \"4.자바로 입력받은 연도가 윤년인지 평년인지 판단하기 leapYear " +
+                                   "5. 임의로 입력받은 숫자 맞추기 numberGolf\"";
                            System.out.println(menu); // 메뉴를 보여준다
                            String select = scanner.next(); //메뉴를 선택할 수 있는 select라는 변수를 쓰기 위해
                            String res = "";
@@ -74,29 +72,56 @@ public class QuizController {
                                case  "0" : // 0인경우
                                    System.out.println("Exit"); return;
                                case  "1" :
-                                   System.out.println("1.주사위"); break;
+                                   System.out.println("1.주사위");
+                                   feb07Service.dice(scanner);break;
                                case  "2" :
                                    System.out.println("2.가위바위보");
                                    feb07Service.rps(scanner); // 서비스의 가위바위보를 스캐너로 받기 위해
                                    break;
                                case  "3" :
-                                   System.out.println("3.입력받은 두 수 사이의 있는 소수 구하기"); break;
+                                   System.out.println("3.입력받은 두 수 사이의 있는 소수 구하기");
+                                   feb07Service.getPrime(scanner);break;
                                case  "4" :
-                                   System.out.println("4.자바로 입력받은 연도가 윤년인지 평년인지 판단하기"); break;
+                                   System.out.println("4.자바로 입력받은 연도가 윤년인지 평년인지 판단하기");
+                                   feb07Service.leapYear(scanner);break;
                                case  "5" :
-                                   System.out.println("5. 임의로 입력받은 숫자 맞추기"); break;
+                                   System.out.println("5. 임의로 입력받은 숫자 맞추기");
+                                   feb07Service.numberGolf(scanner);break;
                                default :
-                                   System.out.println("잘못된 정보");break;
+                                   System.out.println("잘못된 정보입니다.");break;
                            }
                        }
-
-
-
-
-               case  "3":
+                    case  "3":
                    System.out.println("2월 8일");
+                    while (true){
+                        String menu = "\"[8일 소메뉴] 0. EXIT 1. 구구단 2. 야구 3. 로또 4. 은행입출금 5. 죄석예약";
+                        System.out.println(menu);
+                        String select = scanner.next();
+                        String res = "";
+                        switch (select){
+                            case "0" :
+                                System.out.println("Exit");return;
+                            case "1" :
+                                System.out.println("1. 구구단");
+                                feb08Service.timestable(scanner);break;
+                            case "2" :
+                                System.out.println("2. 야구");
+                                feb08Service.baseball(scanner);
+                            case "3" :
+                                System.out.println("3. 로또");
+                                feb08Service.lotto(scanner);
+                            case "4" :
+                                System.out.println("4. 은행 입출금");
+                                feb08Service.bank(scanner);
+                            case "5" :
+                                System.out.println("5. 좌석 예약");
+                                feb08Service.book(scanner);
+                            default :
+                                System.out.println("잘못된 정보입니다");break;
 
-               case "4":
+                        }
+                    }
+                    case "4":
                    System.out.println("2월 9일");
 
 
