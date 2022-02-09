@@ -42,12 +42,13 @@ public class Demo1Application {
                     break;
                 case "4":
                     System.out.println("### Algorithm ###");
+                    AlgorithmController.execute(scanner);
                     break;
                 default:
                     System.out.println(" Wrong Number ");
 
             }
-            OopController.execute(scanner);
+
         }
 
 

@@ -14,7 +14,7 @@ import java.util.Scanner;
  * 2022-02-08     seoseongmin        최초 생성
  */
 public class AlgorithmController {
-    public void execute(Scanner scanner){
+    public static void execute(Scanner scanner){
         while (true){
             System.out.println("[담당] 0.종료 1.권혜민");
             switch (scanner.next()){
