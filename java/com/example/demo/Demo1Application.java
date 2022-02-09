@@ -18,7 +18,7 @@ public class Demo1Application {
         Scanner scanner = new Scanner(System.in);
         AlgorithmController algorithmController = new AlgorithmController();
         AuthController memberController = new AuthController();
-        OopController phoneController = new OopController();
+        OopController oopController = new OopController();
         QuizController quizController = new QuizController();
         while (true) {
             System.out.println("[메인메뉴] 0.EXIT 1. Auth 2. OOP  3. Quiz 4.Algorithm");
