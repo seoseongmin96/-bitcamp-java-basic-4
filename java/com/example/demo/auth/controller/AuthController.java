@@ -1,6 +1,6 @@
 package com.example.demo.auth.controller;
 
-import com.example.demo.auth.doamin.LoginDTO;
+import com.example.demo.auth.doamin.UserDTO;
 import com.example.demo.auth.doamin.BmiDTO;
 import com.example.demo.auth.doamin.GoogleDTO;
 import com.example.demo.auth.doamin.CalcDTO;
@@ -32,7 +32,7 @@ public class AuthController {
 
         GradeDTO grade = new GradeDTO();
 
-        LoginDTO login = new LoginDTO();
+        UserDTO login = UserDTO.getInstance();
 
         MemberService service = new MemberServiceImpl();
 
@@ -70,11 +70,12 @@ public class AuthController {
                grade.setMath(scanner.nextInt());
                res = service.getGrade(grade);break;
                case "5" :
-               System.out.println(LoginDTO.LOGIN_TITLE+"\n ID , PW, Name 입력");
-               login.setId(scanner.next());
-               login.setPw(scanner.next());
-               login.setName(scanner.next());
-               res = service.login(login);break;
+               System.out.println(UserDTO.LOGIN_TITLE+"\n ID , PW, Name 입력");
+               UserDTO u = UserDTO.getInstance();
+               u.setName(scanner.next());
+              u.getInstance().setId(scanner.next());
+              u.getInstance().setName(scanner.next());
+               res = service.login(u);break;
                default: res = "WRONG"; break;
            }
             System.out.println(res);

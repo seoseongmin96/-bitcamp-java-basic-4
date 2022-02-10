@@ -20,7 +20,6 @@ public class GalPhone extends IPhone{
     public GalPhone(String company){
         super(company);
     }
-
     public String getPay() {
         return pay;
     }

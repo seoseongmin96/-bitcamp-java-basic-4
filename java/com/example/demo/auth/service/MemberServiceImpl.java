@@ -14,6 +14,8 @@ import com.example.demo.auth.doamin.*;
  * 2022-02-07     seoseongmin        최초 생성
  */
 public class MemberServiceImpl implements MemberService {
+
+
     /**
      * BMI = w / t * t
      * 고도 비만 : 35 이상
@@ -95,7 +97,7 @@ public class MemberServiceImpl implements MemberService {
     }
 
     @Override
-    public String login(LoginDTO login) {
+    public String login(UserDTO login) {
         return String.format("%s 님 로그인 성공", login.getName());
     }
 }

@@ -59,10 +59,10 @@ public class OopController {
                             System.out.println("### 아이폰 ###");
 
                             iPhone.setSearch("뉴스");
+                            System.out.println(iPhone.getMove());
                             phoneService.useIPhone(iPhone);break;
                         case "4" :
                             System.out.println("### 갤럭시폰 ###");
-
                             galPhone.setPay("삼성페이");
                             phoneService.useGalPhone(galPhone);break;
 

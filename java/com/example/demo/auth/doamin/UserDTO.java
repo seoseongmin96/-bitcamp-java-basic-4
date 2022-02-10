@@ -11,9 +11,14 @@ package com.example.demo.auth.doamin;
  * ================================
  * 2022-01-28     seoseongmin        최초 생성
  */
-public class LoginDTO {
+public class UserDTO {
 
         public static String LOGIN_TITLE = "안녕하십니까";
+
+        private final static UserDTO userDTO = new UserDTO();
+        private UserDTO(){}
+        public static UserDTO getInstance(){return userDTO;}
+
         private String id;
         private String pw;
         private String name;

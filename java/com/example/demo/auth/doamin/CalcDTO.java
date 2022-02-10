@@ -17,6 +17,7 @@ public class CalcDTO {
     private String opcode;
     private int num2;
 
+
     public int getNum1(){
         return num1;
     }

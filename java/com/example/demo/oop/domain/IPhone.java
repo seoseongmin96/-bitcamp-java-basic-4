@@ -1,5 +1,7 @@
 package com.example.demo.oop.domain;
 
+import com.example.demo.auth.doamin.CalcDTO;
+
 /**
  * packageName: com.example.demo.oop.domain
  * fileName   : IPhone
@@ -15,7 +17,7 @@ package com.example.demo.oop.domain;
  */
 
 
-public class IPhone extends CelPhone{
+public class IPhone extends CelPhone {
     public final static String KIND = "아이폰";
     protected String search;
 
@@ -35,6 +37,7 @@ public class IPhone extends CelPhone{
 
     @Override
     public String toString() {
+
        return String.format("[애플]에서 만든 %s을 사용해서 %s중에 [뉴스]를 검색한다",super.getCompany(),
                KIND, super.getMove(),search);
     }
