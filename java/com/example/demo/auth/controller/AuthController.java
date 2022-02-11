@@ -26,13 +26,9 @@ public class AuthController {
 
         CalcDTO calc = new CalcDTO();
 
-        BmiDTO bmi = new BmiDTO();
 
         GoogleDTO google = new GoogleDTO();
 
-        GradeDTO grade = new GradeDTO();
-
-        UserDTO login = UserDTO.getInstance();
 
         MemberService service = new MemberServiceImpl();
 
@@ -48,10 +44,11 @@ public class AuthController {
                    System.out.println("Exit"); return;
                case "1" :
                System.out.println(BmiDTO.BMI+"\n 이름, 키, 몸무게 입력");
-               bmi.setName(scanner.next());
-               bmi.setHeight(scanner.nextDouble());
-               bmi.setWeight(scanner.nextDouble());
-               res = service.getBmi(bmi); break;
+               BmiDTO b = BmiDTO.getInstance();
+               b.setName(scanner.next());
+               b.setHeight(scanner.nextDouble());
+               b.setWeight(scanner.nextDouble());
+               res = service.getBmi(b); break;
                case "2" :
                System.out.println(CalcDTO.CALC_APP+"\n숫자1, 연산자, 숫자2 입력");
                calc.setNum1(scanner.nextInt());
@@ -64,17 +61,18 @@ public class AuthController {
                res = service.search(google);break;
                case "4" :
                System.out.println(GradeDTO.GRADE_TITLE+"\n 이름, 국어 ,영어, 수학");
-               grade.setName(scanner.next());
-               grade.setKor(scanner.nextInt());
-               grade.setEng(scanner.nextInt());
-               grade.setMath(scanner.nextInt());
-               res = service.getGrade(grade);break;
+               GradeDTO g = GradeDTO.getInstance();
+               g.setName(scanner.next());
+               g.setKor(scanner.nextInt());
+               g.setEng(scanner.nextInt());
+               g.setMath(scanner.nextInt());
+               res = service.getGrade(g);break;
                case "5" :
                System.out.println(UserDTO.LOGIN_TITLE+"\n ID , PW, Name 입력");
                UserDTO u = UserDTO.getInstance();
                u.setName(scanner.next());
-              u.getInstance().setId(scanner.next());
-              u.getInstance().setName(scanner.next());
+               u.setId(scanner.next());
+               u.setName(scanner.next());
                res = service.login(u);break;
                default: res = "WRONG"; break;
            }

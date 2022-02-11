@@ -14,6 +14,11 @@ package com.example.demo.auth.doamin;
 
 
 public class BmiDTO {
+
+    private final static BmiDTO bmiDTO = new BmiDTO();
+    public BmiDTO(){}
+    public static BmiDTO getInstance(){return bmiDTO;}
+
     public static String BMI = "BMI";
     private String name;
     private double height;

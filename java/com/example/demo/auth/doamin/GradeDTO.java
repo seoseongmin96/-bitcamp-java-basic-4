@@ -30,6 +30,11 @@ package com.example.demo.auth.doamin;
  */
 
 public class GradeDTO {
+
+    private final static GradeDTO gradeDTO = new GradeDTO();
+    public GradeDTO(){}
+    public static GradeDTO getInstance(){return gradeDTO;}
+
     public static String GRADE_TITLE = "성적표";
     private String name;
     private int kor;
