@@ -18,6 +18,7 @@ public interface Feb10Service {
     // 1인
     void bubbleSort(Scanner scanner);
     void insertionSort(Scanner scanner);
+    //
     void selectionSort(Scanner scanner);
     void quickSort(Scanner scanner);
     void mergeSort(Scanner scanner);

@@ -48,21 +48,21 @@ public class Feb08ServiceImpl implements Feb08Service{
             System.out.println("좌석을 예약하시겠습니까? (1또는 0)"); //좌석을 예약하라는 명령
             int q = scanner.nextInt(); //q라는 변수
 
-            if (q == 0) break; //q 가 0일때
-            System.out.println("현재의 예약상태는 다음과 같습니다.");
+            if (q == 0) break; //q 가 0일때 일시멈춤
+            System.out.println("현재의 예약상태는 다음과 같습니다."); //출력
             System.out.println("===================");
-            for(int i=0; i<10; i++){
+            for(int i=0; i<10; i++){ // 인덱스값이 0이고 10보다 작고 1씩 증가 할때
 
-                System.out.print(i +1 + " \t");
+                System.out.print(i +1 + " \t"); // 인덱스값 +1
             }
             System.out.println();
 
-            for (int i : seat) //
-                System.out.print(i + "\t");
+            for (int i : seat) // for(각 요소 값 : 배열이나 컨테이너 값)
+                 System.out.print(i + "\t");
             System.out.println();
-            System.out.println("몇 번째 좌석을 에약하시겠습니까?");
-            resrved = scanner.nextInt();
-            seat[resrved-1] = 1;
+            System.out.println("몇 번째 좌석을 에약하시겠습니까?"); // 몇 번째 좌석
+            resrved = scanner.nextInt(); //예약 할당하기
+            seat[resrved-1] = 1; // 좌석은 예약 -1 값
             System.out.println("예약되었습니다.");
         }
         System.out.println("프로그램을 종료합니다.");
