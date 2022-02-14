@@ -42,26 +42,26 @@ public class Feb08ServiceImpl implements Feb08Service{
         // 4. 예약이 안된 좌석은 0으로 나타내라.
         
         int seat[] = new int[10]; //좌석 10개를 배열로 만들기 위함
-        int resrved; // 예약이라는 변수
+        int resrved; //
 
         while (true){
-            System.out.println("좌석을 예약하시겠습니까? (1또는 0)"); //좌석을 예약하라는 명령
-            int q = scanner.nextInt(); //q라는 변수
+            System.out.println("좌석을 예약하시겠습니까? (1또는 0)");
+            int q = scanner.nextInt();
 
-            if (q == 0) break; //q 가 0일때 일시멈춤
-            System.out.println("현재의 예약상태는 다음과 같습니다."); //출력
+            if (q == 0) break;
+            System.out.println("현재의 예약상태는 다음과 같습니다.");
             System.out.println("===================");
-            for(int i=0; i<10; i++){ // 인덱스값이 0이고 10보다 작고 1씩 증가 할때
+            for(int i=0; i<10; i++){
 
-                System.out.print(i +1 + " \t"); // 인덱스값 +1
+                System.out.print(i +1 + " \t");
             }
             System.out.println();
 
             for (int i : seat) // for(각 요소 값 : 배열이나 컨테이너 값)
                  System.out.print(i + "\t");
             System.out.println();
-            System.out.println("몇 번째 좌석을 에약하시겠습니까?"); // 몇 번째 좌석
-            resrved = scanner.nextInt(); //예약 할당하기
+            System.out.println("몇 번째 좌석을 에약하시겠습니까?");
+            resrved = scanner.nextInt();
             seat[resrved-1] = 1; // 좌석은 예약 -1 값
             System.out.println("예약되었습니다.");
         }
